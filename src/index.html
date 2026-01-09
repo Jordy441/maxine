@@ -1,82 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-  <link rel="stylesheet" href="styles.css">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Happy Birthday, Maxine!</title>
-  <style>
-    body {
-      margin: 0;
-      min-height: 100vh;
-      font-family: system-ui, sans-serif;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: linear-gradient(135deg, #ffd6e8, #ffb3d9);
-      color: #333;
-    }
-                
-
-    .card {
-      background: #ffffffee;
-      border-radius: 20px;
-      padding: 36px;
-      max-width: 520px;
-      width: 90%;
-      text-align: center;
-      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.18);
-      position: relative;
-      overflow: hidden;
-    }
-
-    h1 {
-      margin: 0;
-      font-size: 2.8rem;
-      letter-spacing: 0.05em;
-    }
-
-    h2 {
-      margin: 0.4em 0 1em;
-      font-size: 1.4rem;
-      color: #ff4f81;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-    }
-
-    .tag {
-      display: inline-block;
-      margin-bottom: 1.4em;
-      padding: 0.4em 1.2em;
-      border-radius: 999px;
-      background: #ff4f8115;
-      color: #ff4f81;
-      font-weight: 600;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      font-size: 0.85rem;
-    }
-
-    p {
-      margin: 0.6em 0;
-      line-height: 1.6;
-      font-size: 1.05rem;
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
   <div class="card">
+    <div class="sparkles" id="sparkles"></div>
+
     <h1>Happy Birthday</h1>
     <h2>Maxine</h2>
 
-    <div class="tag">Celebrate Your Day</div>
+    <div class="tag">Make a wish</div>
 
     <p>
-      Hope you have a good day with a few G&Ts lol. Seriously you guys at Optima have been fantastic and I thank you! 
+      Wishing you a day filled with joy, laughter,
+      and all the things that make you smile.
     </p>
-
     <p>
-      Keeper Lit!!!. From Jordan
+      May this year bring new adventures, bright memories,
+      and more reasons to celebrate.
     </p>
   </div>
+
+  <script>
+    const sparklesContainer = document.getElementById("sparkles");
+
+    for (let i = 0; i < 30; i++) {
+      const s = document.createElement("div");
+      s.className = "sparkle";
+      s.style.left = Math.random() * 100 + "vw";
+      s.style.animationDuration = 6 + Math.random() * 6 + "s";
+      s.style.animationDelay = Math.random() * 5 + "s";
+      s.style.opacity = Math.random();
+      sparklesContainer.appendChild(s);
+    }
+  </script>
+
 </body>
 </html>
